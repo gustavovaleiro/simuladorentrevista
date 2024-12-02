@@ -6,12 +6,238 @@
   <meta name="description" content="Intelli AGILE SOFTWARE - Fábrica de software e automações">
   <title>Intelli AGILE SOFTWARE</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f0f4f8;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 119, 182, 0.6), rgba(0, 119, 182, 0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .cta-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #f1c40f;
+      color: #0077b6;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #ffb000;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #0077b6;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #f1c40f;
+    }
+
+    /* Sections */
+    .section {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Serviços Section */
+    .servicos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .servico {
+      background: white;
+      padding: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      transform: scale(1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .servico:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .servico h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Form */
+    .form {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form input,
+    .form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 1rem;
+      background-color: #0077b6;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form button:hover {
+      background-color: #005f8a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0077b6;
+      color: white;
+    }
+
+    footer a {
+      color: #f1c40f;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-content">
       <h1>Intelli AGILE SOFTWARE</h1>
       <p>Transformando ideias em soluções digitais inovadoras</p>
+      <button class="cta-button">Saiba Mais</button>
     </div>
   </header>
 
@@ -19,42 +245,38 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#sobre">Sobre Nós</a></li>
-      <li><a href="#servicos">Serviços Realizados</a></li>
-      <li><a href="#contato">Entrar em Contato</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="termodeuso.html">Termos de Uso</a></li>
+      <li><a href="politicaprivacidade.html">Política de Privacidade</a></li>
     </ul>
   </nav>
 
   <section id="sobre" class="section">
     <h2>Sobre Nós</h2>
-    <p>
-      Na Intelli AGILE SOFTWARE, somos apaixonados por tecnologia e inovação. Com uma equipe especializada em metodologias ágeis, 
-      entregamos soluções de software personalizadas que atendem às necessidades únicas de nossos clientes. 
-      Atuamos em diversas áreas, incluindo desenvolvimento de sistemas web e mobile, automações empresariais e consultoria tecnológica, 
-      sempre priorizando a qualidade e a entrega contínua de valor. Estamos comprometidos em ajudar nossos parceiros a alcançar 
-      seus objetivos por meio de soluções tecnológicas estratégicas e eficazes.
-    </p>
+    <p>Especializados em metodologias ágeis, criamos soluções digitais sob medida, ajudando empresas a transformar ideias em realidade.</p>
   </section>
 
   <section id="servicos" class="section">
-    <h2>Serviços Realizados</h2>
+    <h2>Serviços</h2>
     <div class="servicos-container">
       <div class="servico">
-        <h3>Plataforma de E-commerce Inteligente</h3>
-        <p>Desenvolvemos uma plataforma de e-commerce personalizada com automação de estoque, integração de pagamentos e relatórios analíticos para melhorar as vendas.</p>
+        <h3>E-commerce Inteligente</h3>
+        <p>Soluções completas para otimizar vendas e automação de processos.</p>
       </div>
       <div class="servico">
-        <h3>Sistema de Gestão Escolar</h3>
-        <p>Entregamos um sistema completo de gestão escolar, incluindo controle de matrículas, boletins automatizados e suporte a ensino remoto.</p>
+        <h3>Gestão Escolar</h3>
+        <p>Plataformas educacionais robustas para escolas modernas.</p>
       </div>
       <div class="servico">
-        <h3>Automação de Processos Internos</h3>
-        <p>Implementamos soluções de automação para departamentos financeiros e de recursos humanos, reduzindo erros manuais em 70%.</p>
+        <h3>Automação Interna</h3>
+        <p>Reduza custos e aumente eficiência em todas as áreas.</p>
       </div>
     </div>
   </section>
 
   <section id="contato" class="section">
-    <h2>Entrar em Contato</h2>
+    <h2>Entre em Contato</h2>
     <form action="#" method="post" class="form">
       <label for="name">Nome:</label>
       <input type="text" id="name" name="name" required>
