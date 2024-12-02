@@ -9,92 +9,96 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background: linear-gradient(120deg, #e0e5ec, #f8f9fa);
-  color: #333;
+  background-color: #f0f4f8;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
   background-color: #0077b6;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.nav-links {
+.navbar ul {
   list-style: none;
   display: flex;
+  gap: 1.5rem;
 }
 
-.nav-links li {
-  margin-left: 1rem;
-}
-
-.nav-links a {
+.navbar a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.navbar a:hover {
   color: #f1c40f;
 }
 
 /* Sections */
 .section {
-  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 2rem;
+  background: #ffffff;
 }
 
 .section:nth-child(even) {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
 }
 
-/* Form */
-.form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  background: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.form input, .form textarea, .form button {
-  width: 100%;
-  padding: 0.5rem;
+h2 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.form button {
-  background: #0077b6;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
+p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.form button:hover {
-  background: #005f8d;
+/* Serviços Section */
+.servicos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
+.servico {
+  background: white;
   padding: 1rem;
-  background: #0077b6;
-  color: white;
-}
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 
